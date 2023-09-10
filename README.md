@@ -8,5 +8,11 @@
 - serverless
     ```bash
         npm install serverless -g
+
+        serverless config credentials --provider aws --key "ACCESS_KEY_ID" --secret "AWS_SECRET_ACCESS_KEY"
     ```
 
+
+## 배포준비
+
+1. serverless.com 에 로그인 합니다
