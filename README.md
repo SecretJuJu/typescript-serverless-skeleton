@@ -16,3 +16,21 @@
 ## 배포준비
 
 1. serverless.com 에 로그인 합니다
+
+```bash
+    serverless login
+```
+
+2. build & deploy
+
+```bash
+    yarn deploy # deploy
+```
+
+## 개발환경
+
+1. 로컬에서 테스트
+
+```bash
+    yarn dev # local test
+```
