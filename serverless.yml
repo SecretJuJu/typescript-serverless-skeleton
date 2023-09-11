@@ -18,11 +18,11 @@ provider:
         - cloudformation:ExecuteChangeSet
         - cloudformation:DeleteChangeSet
         - cloudformation:ValidateTemplate
-      Resource: "*"
+      Resource: '*'
     - Effect: Allow
       Action:
         - lambda:*
-      Resource: "*"
+      Resource: '*'
     - Effect: Allow
       Action:
         - s3:CreateBucket
@@ -34,9 +34,9 @@ provider:
         - s3:DeleteObject
         # @see https://github.com/serverless/serverless/issues/5919
         - s3:GetEncryptionConfiguration
-        - s3:PutEncryptionConfiguration 
+        - s3:PutEncryptionConfiguration
         - s3:DeleteBucketPolicy
-      Resource: "*"
+      Resource: '*'
     - Effect: Allow
       Action:
         - logs:CreateLogGroup
@@ -47,14 +47,14 @@ provider:
         - logs:DescribeLogGroups
         - logs:DescribeLogStreams
         - logs:TagResource
-      Resource: "*"
+      Resource: '*'
     - Effect: Allow
       Action:
         - apigateway:GET
         - apigateway:POST
         - apigateway:PUT
         - apigateway:DELETE
-      Resource: "*"
+      Resource: '*'
     - Effect: Allow
       Action:
         - iam:GetRole
@@ -63,7 +63,7 @@ provider:
         - iam:DeleteRole
         - iam:PutRolePolicy
         - iam:PassRole
-      Resource: "*"
+      Resource: '*'
 
 functions:
   hello:
@@ -72,3 +72,8 @@ functions:
       - http:
           path: hello
           method: get
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-tscpaths
